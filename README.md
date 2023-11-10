@@ -21,6 +21,5 @@ Al click dell'utente sulle frecce, il programma cambierà l’immagine attiva, c
 
 2. Eliminiamo il markup dall html e lo aggiugniamo con JS. 
  - Dichiariamo una costante, collegata all html. 
- - Creo un "<div>" con classe ".items" che contiene i contenitori delle immagini. 
- - Creo "<div>"  con classe ".item" che contiente le immagini, per quanti elementi contiene l' Array.
- - Dentro il "<div>" con classe ".item" scrivo il collegamento delle immagini.
+ - Creo un ciclo per Creare i "<div>"
+ - Aggiungo la classe ".active" che servira per mostrare le immagini.
