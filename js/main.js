@@ -13,22 +13,28 @@ console.log({ immagini });
 const elementItems = document.querySelector(".items");
 console.log({ elementItems });
 
+let elementItem = " ";
+
 // Ciclo per creare i div dentro gli items
 for (let i = 0; i < immagini.length; i++) {
 
-  elementItems.innerHTML += (`<div class="item">
-    <img src="./img/0${i + 1}.jpg" alt="" />
+  elementItem += (`<div class="item">
+    <img src="img/${immagini[i]}" alt="Paesaggio ${i + 1}" />
   </div>`);
 }
+elementItems.innerHTML += elementItem;
+
+
 
 //Variabile immagine corrente
 let elementCorrente = 0;
 
 // Aggiungo la classe Active
 const elementActive = document.querySelectorAll(".item");
+console.log(elementActive)
 
 elementActive[elementCorrente].classList.add("active");
-console.log(elementCorrente)
+console.log({ elementCorrente })
 
 // Creo le variabili collegate alle frecce
 const elementUp = document.querySelector(".next");
@@ -36,19 +42,25 @@ const elementDown = document.querySelector(".prev");
 console.log({ elementUp });
 console.log({ elementDown });
 
-// CON  IL MODULO "%" ELEMENTCORRENTE PUò AUMENTARE FINO ALLA LUNGHEZZA DELL ARRAY, SUPERATO LA LUGNHEZZA RITORNA ALL INIZIO. (??????????)
 elementUp.addEventListener("click", function () {
   elementActive[elementCorrente].classList.remove("active");
-  elementCorrente = (elementCorrente + 1) % elementActive.length;
+  if (elementCorrente === elementActive.length - 1) {
+    elementCorrente = 0;
+  } else {
+    elementCorrente++
+  }
   elementActive[elementCorrente].classList.add("active");
   console.log(elementCorrente)
 }
 )
 
-// CON  IL MODULO "%" ELEMENTCORRENTE PUò DIMUNIRE FINO ALLA LUNGHEZZA DELL ARRAY, MA SE IL RISULTATO E' NEGATIVO DA ERRORE, QUINDI AGGIUNGIAMO LA LUNGHEZZA STESSA,COSI RESTITUISCE IL VALORE DI INIZIALE. (??????????)
 elementDown.addEventListener("click", function () {
   elementActive[elementCorrente].classList.remove("active");
-  elementCorrente = (elementCorrente - 1 + elementActive.length) % elementActive.length;
+  if (elementCorrente === 0) {
+    elementCorrente = elementActive.length - 1;
+  } else {
+    elementCorrente--
+  }
   elementActive[elementCorrente].classList.add("active");
   console.log(elementCorrente)
 }
@@ -61,6 +73,6 @@ elementDown.addEventListener("click", function () {
 
 // for (let i = 0; i < immagini.length; i++) {
 
-//   elementImmagini.innerHTML += (`<img src="./img/0${i + 1}.jpg" alt="" />`)
+//   elementImmagini.innerHTML += (`<img src="img/${immagini[i]}" alt="" />/>`)
 // }
 // ;

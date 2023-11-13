@@ -23,8 +23,10 @@ Al click dell'utente sulle frecce, il programma cambierà l’immagine attiva, c
 2. Creiamo il nostro Array d'immagini.
 
 2. Eliminiamo il markup dall html e lo aggiugniamo con JS. 
- - Dichiariamo una costante, collegata all html. 
- - Creo un ciclo per Creare i "<div>".
+ - Dichiariamo una variabile, collegata all html. 
+ - Dichiariamo una variabile vuota, Fuori dal ciclo. 
+ -  Dentro al ciclo sovrascrivo la variabile vuota con il mio html, in modo da 
+    creare i div e le immagini che mi servono.
  - Aggiungo la classe ".active" che servira per mostrare le immagini che in base a una variabile aggiunge la classe solo all immagine da mostrare. 
 
 ### MILESTONE 2
@@ -35,4 +37,7 @@ Al click dell'utente sulle frecce, il programma cambierà l’immagine attiva, c
  - Il primo colleghiamo la prima variabile, e ogni volta che viene cliccato, la variabile "elementCorrente" aumenta di 1.
  - Il secondo colleghiamo la prima variabile, e ogni volta che viene cliccato, la variabile "elementCorrente" diminiusce di 1.
  
+
+Fuori creo una variabile vuota, Dentro al ciclo "riga 16" sovrascrivo la variabile vuota con il mio html, e creo i div e le immagini che mi servono.
+poi fuori al ciclo uso .innerhtml in modo che si ripeta solo una volta, e non tutte le volte nel ciclo.
 
