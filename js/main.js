@@ -9,14 +9,14 @@
 const immagini = ["01.jpg", "02.jpg", "03.jpg", "04.jpg", "05.jpg",];
 console.log({ immagini });
 
-// Variabile Container Immagini
-const elementContainer = document.querySelector(".items");
-console.log({ elementContainer });
+// Variabile Items Immagini
+const elementItems = document.querySelector(".items");
+console.log({ elementItems });
 
 // Ciclo per creare i div dentro gli items
 for (let i = 0; i < immagini.length; i++) {
 
-  elementContainer.innerHTML += (`<div class="item">
+  elementItems.innerHTML += (`<div class="item">
     <img src="./img/0${i + 1}.jpg" alt="" />
   </div>`);
 }
@@ -53,3 +53,14 @@ elementDown.addEventListener("click", function () {
   console.log(elementCorrente)
 }
 )
+
+
+// elementItems.innerHTML += (`<div class="items-thub">`);
+
+// const elementImmagini = document.querySelector(".items-thub");
+
+// for (let i = 0; i < immagini.length; i++) {
+
+//   elementImmagini.innerHTML += (`<img src="./img/0${i + 1}.jpg" alt="" />`)
+// }
+// ;

@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 
- /* Contenitore  */
+/* Contenitore  */
 .container {
     width: 900px;
     height: 100vh;
@@ -43,7 +43,8 @@
 
 /* Precendete e Successiva */
 
-.prev, .next {
+.prev,
+.next {
     width: 20px;
     height: 20px;
     margin: 10px 0;
@@ -60,7 +61,7 @@
     top: 0;
 }
 
-.prev{
+.prev {
     bottom: 0;
 }
 
@@ -90,4 +91,12 @@
     bottom: 35%;
     left: 50%;
     transform: translate(-50%) rotate(135deg);
+}
+
+.items-thub {
+    display: flex;
+    flex-direction: column;
+    width: 107px;
+    position: absolute;
+    right: -107px;
 }
