@@ -19,8 +19,7 @@ let elementItem = " ";
 for (let i = 0; i < immagini.length; i++) {
 
   elementItem += (`<div class="item">
-    <img src="img/${immagini[i]}" alt="Paesaggio ${i + 1}" />
-  </div>`);
+    <img src="img/${immagini[i]}" alt="Paesaggio ${i + 1}" /></div>`);
 }
 elementItems.innerHTML += elementItem;
 
@@ -66,13 +65,17 @@ elementDown.addEventListener("click", function () {
 }
 )
 
+const elementContainer = document.querySelector(".container");
 
-// elementItems.innerHTML += (`<div class="items-thub">`);
+// elementContainer.innerHTML += (`<div class="items-thumb"></div>`);
 
 // const elementImmagini = document.querySelector(".items-thub");
 
+// let elementThumb = " "
+
 // for (let i = 0; i < immagini.length; i++) {
 
-//   elementImmagini.innerHTML += (`<img src="img/${immagini[i]}" alt="" />/>`)
+//   elementThumb += (`<img src="img/${immagini[i]}" alt="" />`)
 // }
-// ;
+
+// elementImmagini.innerHTML += elementThumb;

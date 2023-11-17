@@ -40,4 +40,3 @@ Al click dell'utente sulle frecce, il programma cambierà l’immagine attiva, c
 
 Fuori creo una variabile vuota, Dentro al ciclo "riga 16" sovrascrivo la variabile vuota con il mio html, e creo i div e le immagini che mi servono.
 poi fuori al ciclo uso .innerhtml in modo che si ripeta solo una volta, e non tutte le volte nel ciclo.
-

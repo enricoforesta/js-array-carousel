@@ -96,7 +96,5 @@
 .items-thub {
     display: flex;
     flex-direction: column;
-    width: 107px;
-    position: absolute;
-    right: -107px;
+    width: 108px;
 }
